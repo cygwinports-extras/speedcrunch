@@ -1,0 +1,62 @@
+speedcrunch
+------------------------------------------
+High precision algebraic calculator
+
+Runtime requirements:
+  cygwin-1.5.21-1
+  qt3-3.3.6-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.21-1
+  binutils-20060709-1
+  cygport-0.2.5-1
+  gcc-core-3.4.4-1
+  gcc-g++-3.4.4-1
+  make-3.81-1
+
+Canonical website:
+  http://speedcrunch.digitalfanatics.org/
+
+Canonical download:
+  http://speedcrunch.digitalfanatics.org/download.html
+
+-------------------------------------------
+
+Build instructions:
+  unpack speedcrunch-0.5.4-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./speedcrunch-0.5.4-X.cygport all
+
+This will create:
+  /usr/src/speedcrunch-0.5.4-X-src.tar.bz2
+  /usr/src/speedcrunch-0.5.4-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/crunch.exe
+  /usr/share/crunch/crunch_de.qm
+  /usr/share/crunch/crunch_fr.qm
+  /usr/share/crunch/crunch_id.qm
+  /usr/share/crunch/crunch_it.qm
+  /usr/share/crunch/crunch_pt.qm
+  /usr/share/crunch/crunch_ru.qm
+  /usr/share/doc/Cygwin/speedcrunch-0.5.4.README
+  /usr/share/doc/speedcrunch-0.5.4/COPYING
+  /usr/share/doc/speedcrunch-0.5.4/ChangeLog
+  /usr/share/doc/speedcrunch-0.5.4/README
+
+------------------
+
+Port Notes:
+
+----- version 0.5.4-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
