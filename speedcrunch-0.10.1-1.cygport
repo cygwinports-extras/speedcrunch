@@ -1,0 +1,17 @@
+inherit qt4
+
+DESCRIPTION="Qt calculator"
+HOMEPAGE="http://speedcrunch.org/"
+SRC_URI="http://speedcrunch.googlecode.com/files/${P}.tar.gz"
+
+src_compile() {
+	# move to libQtCore4-dev?
+	check_prog_req lrelease qt4-dev-tools
+
+	cd ${S}/src/i18n
+	lrelease *.ts || error "lrelease failed"
+	cd ${B}
+	CYGCMAKE_SOURCE="${S}/src"
+	cygcmake
+	cygmake
+}
