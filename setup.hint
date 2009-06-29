@@ -1,4 +1,4 @@
 category: Math KDE
-requires: cygwin libQtCore4 libQtGui4
+requires: libQtCore4 libQtGui4
 sdesc: "High precision algebraic calculator"
 ldesc: "High precision algebraic calculator"
