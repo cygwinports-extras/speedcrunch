@@ -13,10 +13,10 @@ of knowledge."
 HOMEPAGE="http://speedcrunch.org/"
 SRC_URI="https://github.com/speedcrunch/SpeedCrunch/archive/${VERSION}/SpeedCrunch-${VERSION}.tar.gz"
 SRC_DIR="SpeedCrunch-${VERSION}"
+PATCH_URI="0.11-cygwin.patch"
 
 src_compile() {
 	cd ${B}
 	CYGCMAKE_SOURCE="${S}/src"
 	qt4_cmake_compile
-#	cygmake
 }

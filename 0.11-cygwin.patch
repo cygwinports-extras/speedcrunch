@@ -1,0 +1,17 @@
+--- origsrc/SpeedCrunch-0.11/src/CMakeLists.txt	2014-01-29 15:24:08.000000000 -0600
++++ src/SpeedCrunch-0.11/src/CMakeLists.txt	2014-11-26 01:12:48.950386100 -0600
+@@ -37,13 +37,11 @@ ENDIF( NOT WIN32 )
+ # sources
+ INCLUDE(SourceFiles.cmake)
+ 
+-IF( MINGW )
++IF( MINGW)
+   # resource compilation for mingw
+   ADD_CUSTOM_COMMAND( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/speedcrunchico.o
+                       COMMAND windres.exe -I${CMAKE_CURRENT_SOURCE_DIR} -i${CMAKE_CURRENT_SOURCE_DIR}/resources/speedcrunch.rc -o ${CMAKE_CURRENT_BINARY_DIR}/speedcrunchico.o )
+   SET(speedcrunch_SOURCES ${speedcrunch_SOURCES} ${CMAKE_CURRENT_BINARY_DIR}/speedcrunchico.o)
+-ELSE(MINGW)
+-  SET(speedcrunch_SOURCES ${speedcrunch_SOURCES} resources/speedcrunch.rc)
+ ENDIF(MINGW)
+ 
+ # enable warnings
