@@ -1,22 +1,22 @@
-inherit qt4
+inherit qt4-cmake
 
 NAME="speedcrunch"
-VERSION=0.10.1
+VERSION=0.11
 RELEASE=1
 CATEGORY="Math"
 SUMMARY="High precision algebraic calculator"
-DESCRIPTION="High precision algebraic calculator"
+DESCRIPTION="SpeedCrunch is a high-precision scientific calculator. It features
+a syntax-highlighted scrollable display and is designed to be fully used via
+keyboard. Some distinctive features are auto-completion of functions and
+variables, a formula book, and quick insertion of constants from various fields
+of knowledge."
 HOMEPAGE="http://speedcrunch.org/"
-SRC_URI="http://speedcrunch.googlecode.com/files/${NAME}-${VERSION}.tar.gz"
+SRC_URI="https://github.com/speedcrunch/SpeedCrunch/archive/${VERSION}/SpeedCrunch-${VERSION}.tar.gz"
+SRC_DIR="SpeedCrunch-${VERSION}"
 
 src_compile() {
-	# move to libQtCore4-dev?
-	check_prog_req lrelease qt4-dev-tools
-
-	cd ${S}/src/i18n
-	lrelease *.ts || error "lrelease failed"
 	cd ${B}
 	CYGCMAKE_SOURCE="${S}/src"
-	cygcmake
-	cygmake
+	qt4_cmake_compile
+#	cygmake
 }
