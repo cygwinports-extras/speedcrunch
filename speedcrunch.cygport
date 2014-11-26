@@ -1,8 +1,13 @@
 inherit qt4
 
-DESCRIPTION="Qt calculator"
+NAME="speedcrunch"
+VERSION=0.10.1
+RELEASE=1
+CATEGORY="Math"
+SUMMARY="High precision algebraic calculator"
+DESCRIPTION="High precision algebraic calculator"
 HOMEPAGE="http://speedcrunch.org/"
-SRC_URI="http://speedcrunch.googlecode.com/files/${P}.tar.gz"
+SRC_URI="http://speedcrunch.googlecode.com/files/${NAME}-${VERSION}.tar.gz"
 
 src_compile() {
 	# move to libQtCore4-dev?
